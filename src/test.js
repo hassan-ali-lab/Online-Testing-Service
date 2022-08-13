@@ -41,6 +41,8 @@ class Test extends React.Component {
   }
 
   componentDidMount() {
+    this.loadTestData();
+
     let timeLeftVar = this.secondsToTime(this.state.seconds);
     this.setState({ time: timeLeftVar });
   }
@@ -88,9 +90,7 @@ class Test extends React.Component {
     });
   };
 
-  componentDidMount() {
-    this.loadTestData();
-  }
+  
   nextQuestion = () => {
     const { myAnswer, answer, score } = this.state;
     if (myAnswer === answer) {
