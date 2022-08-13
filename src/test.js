@@ -27,6 +27,11 @@ class Test extends React.Component {
   }
   nextQuestion = () => {
     const { myAnswer, answer, score } = this.state;
+    if (myAnswer === answer) {
+      this.setState({
+        score: score + 1
+      });
+    }
 
     this.setState({
       curr_Question: this.state.curr_Question + 1
