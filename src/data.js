@@ -14,13 +14,13 @@ export const Data = [
     {
         id: 2,
         question: `Which web app attribute is defined by the statement:”The quality and aesthetic nature of content remains an important determinant of the quality of a WebApp”? `,
-        options: [`Availability`, `Continuous evolution`, ` Content sensitive`],
-        answer: ` Content sensitive`
+        options: [`Availability`, `Continuous evolution`, `Content sensitive`],
+        answer: `Content sensitive`
     },
     {
         id: 3,
         question: ` If the user queries a collection of large databases and extracts information from the webapp, the webapp is categorized under `,
-        options: [`Database access app`, `Service oriented app`, ` Data warehousing app`],
+        options: [`Database access app`, `Service oriented app`, `Data warehousing app`],
         answer: `Data warehousing app`
     },
     {

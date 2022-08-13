@@ -9,8 +9,22 @@ export default class EndResult extends React.Component {
           The key is :
           <ul>
             {this.props.Data.map((item, index) => (
-              <li className="ui floating message options" key={index}>
-                {item.answer}
+              <li className="ui floating message options" key={item.id}>
+                <div>Question {item.id+1} : {item.question}</div> 
+                <div>
+                {item.options.map((option) => (
+                <p
+                    key={option}
+                    className={`
+            ${item.answer === option ? "text-light bg-dark" : null}
+         `}
+                    onClick={() => this.props.onOptionSelection(option)}
+                >
+                    {option}
+                </p>
+            ))}
+            </div> 
+                {/* {item.answer} */}
               </li>
             ))}
           </ul>

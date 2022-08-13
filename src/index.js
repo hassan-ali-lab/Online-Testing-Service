@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import Test from "./test";
 import './styles.css';
 
-import './styles.css';
 import About from './about';
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -14,6 +13,7 @@ function App() {
       <div className="app">
         <BrowserRouter>
           <nav className="navbar navbar-expand navbar-light bg-light">
+
             <div className="navbar">
               <div className="navbar-nav">
                 <Link className="nav-item nav-link" to="/">Test</Link>
