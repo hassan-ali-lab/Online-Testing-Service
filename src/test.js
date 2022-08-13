@@ -1,5 +1,6 @@
 import React from "react";
 import { Data } from "./data";
+import Quesion from "./quesion";
 
 class Test extends React.Component {
 /* possible states for a question*/
@@ -51,6 +52,9 @@ class Test extends React.Component {
       });
     }
   }
+  handleOptionSelection = (option)=>{
+    this.check_Answer(option);
+  }
   //check answer
   check_Answer = (answer) => {
     this.setState({ myAnswer: answer, disabled: false });
@@ -89,13 +93,19 @@ class Test extends React.Component {
     } else {
       return (
         <div className="App">
-          <h1>{this.state.questions} </h1>
-          <span>{`Questions ${curr_Question}  out of ${
-            Data.length - 1
+          
+          <Quesion onOptionSelection = {this.handleOptionSelection} options={options} question={this.state.questions} myAnswer={myAnswer} curr_Question={curr_Question}/>
+{/*           
+          <span>{`Questions ${curr_Question + 1}  out of ${
+            Data.length 
           } remaining `}</span>
+
+
+          <h1>{this.state.questions} </h1>
+          
           {options.map((option) => (
             <p
-              key={option.id}
+              key={option}
               className={`ui floating message options
          ${myAnswer === option ? "selected" : null}
          `}
@@ -103,7 +113,10 @@ class Test extends React.Component {
             >
               {option}
             </p>
-          ))}
+          ))} */}
+
+
+
           {curr_Question < Data.length - 1 && (
             <button
               className="ui inverted button"
